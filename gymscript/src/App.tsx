@@ -1,9 +1,13 @@
 import { useState } from "react";
+import Navbar from "@/scenes/navbar";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <div className="app"></div>;
+  const [selectedPage, setSelectedPage] = useState<string>("home");
+  return (
+    <div className="app bg-gray-20">
+      <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+    </div>
+  );
 }
 
 export default App;
